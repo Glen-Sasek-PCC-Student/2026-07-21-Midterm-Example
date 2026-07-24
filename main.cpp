@@ -35,7 +35,7 @@ int main()
   cout << "Enter player 1 name: ";
   getline(cin, player_a_name);
 
-  cout << "How many rocks did Gordan Freeman collect? ";
+  cout << "How many rocks did " << player_a_name << " collect? ";
   cin >>  player_a_rocks;
   // cin.get();
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
