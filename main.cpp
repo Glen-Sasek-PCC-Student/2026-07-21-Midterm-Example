@@ -36,7 +36,7 @@ int main()
   getline(cin, player_a_name);
 
   cout << "How many rocks did " << player_a_name << " collect? ";
-  cin >>  player_a_rocks;
+  cin >> player_a_rocks;
   // cin.get();
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   // Test for less than zero
@@ -48,7 +48,82 @@ int main()
   sum = sum + player_a_rocks;
   sum = sum + player_b_rocks;
   sum = sum + player_c_rocks;
-  // Calculate and report places and average 
+  // Calculate and report places and average
+
+  int a = player_a_rocks;
+  int b = player_b_rocks;
+  int c = player_c_rocks;
+
+  if (a == b and b == c)
+  {
+    cout << "It is a three way tie!" << endl;
+  }
+  else if (a == b and b > c)
+  {
+    cout << player_a_name << " and " << player_b_name << " tie for first place." << endl;
+    cout << player_c_name << " is in second place." << endl;
+  }
+  else if (a == b and b < c)
+  {
+    cout << player_c_name << " is in first place." << endl;
+    cout << player_a_name << " and " << player_b_name << " tie for second place." << endl;
+  }
+  else if (a < b and b == c)
+  {
+    cout << player_b_name << " and " << player_c_name << " tie for first place." << endl;
+    cout << player_a_name << " is in second place." << endl;
+  }
+  else if (a > b and b == c)
+  {
+    cout << player_a_name << " is in first place." << endl;
+    cout << player_b_name << " and " << player_c_name << " tie for second place." << endl;
+  }
+  else if (a == c and b < c)
+  {
+    cout << player_a_name << " and " << player_c_name << " tie for first place." << endl;
+    cout << player_b_name << " is in second place." << endl;
+  }
+  else if (a == c and b > c)
+  {
+    cout << player_b_name << " is in first place." << endl;
+    cout << player_c_name << " and " << player_c_name << " tie for second place." << endl;
+  }
+  else if (a > c and b > c)
+  {
+    cout << player_a_name << " is in first place." << endl;
+    cout << player_b_name << " is in second place." << endl;
+    cout << player_c_name << " is in third place." << endl;
+  }
+  else if (a > c and c > b)
+  {
+    cout << player_a_name << " is in first place." << endl;
+    cout << player_c_name << " is in second place." << endl;
+    cout << player_b_name << " is in third place." << endl;
+  }
+  else if (b > a and a > c)
+  {
+    cout << player_b_name << " is in first place." << endl;
+    cout << player_a_name << " is in second place." << endl;
+    cout << player_c_name << " is in third place." << endl;
+  }
+  else if (b > c and c > a)
+  {
+    cout << player_b_name << " is in first place." << endl;
+    cout << player_c_name << " is in second place." << endl;
+    cout << player_a_name << " is in third place." << endl;
+  }
+  else if (c > a and a > b)
+  {
+    cout << player_c_name << " is in first place." << endl;
+    cout << player_a_name << " is in second place." << endl;
+    cout << player_b_name << " is in third place." << endl;
+  }
+  else if (c > b and b > a)
+  {
+    cout << player_c_name << " is in first place." << endl;
+    cout << player_b_name << " is in second place." << endl;
+    cout << player_a_name << " is in third place." << endl;
+  }
 
   cout << endl;
   cout << fixed << setprecision(2);
@@ -56,6 +131,7 @@ int main()
 
   cout << endl;
   cout << "Congratulations Rock Collectors!" << endl;
+
   /*
 
 Enter player 1 name: Gordan Freeman
